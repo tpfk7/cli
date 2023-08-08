@@ -35,7 +35,7 @@ async function getStatus(e) {
 
 }
 
-function displayStatus(data){
+function displayStatus(data) {
 
     let heading = "API Key Status";
     let results = `<div>Your key is valid until</div>`;
@@ -45,3 +45,19 @@ function displayStatus(data){
     document.getElementById("results-content").innerHTML = results;
     resultsModal.show();
 }
+
+function initMap() {
+    // Create a map object centered at a specific location
+    var map = new google.maps.Map(document.getElementById("map"), {
+        center: {
+            lat: 37.7749,
+            lng: -122.4194
+        }, // San Francisco, CA
+        zoom: 12, // Zoom level
+    });
+
+    // You can add markers, polygons, lines, etc. to the map here
+}
+
+// Initialize the map when the page loads
+initMap();
